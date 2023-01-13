@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+.icons{
+    display: flex;
+    gap: 2em;
+}
+.icons a{
+    text-decoration: none;
+    position: relative;
+}
+.icons a .layed{
+    width: 55px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    transition: transform .3s;
+}
+.icons a .layed span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.icons a:hover .layed span:nth-child(1){
+    opacity: .8;
+    transform: translate(-4px, 4px);
+}
+.icons a:hover .layed span:nth-child(2){
+    opacity: .6;
+    transform: translate(-8px, 8px);
+}
+.icons a:hover .layed span:nth-child(3){
+    opacity: .4;
+    transform: translate(-12px, 12px);
+}
+.icons a:hover .layed span:nth-child(4){
+    opacity: .2;
+    transform: translate(-16px, 16px);
+}
+.icons a:hover .layed span:nth-child(5){
+    opacity: 1;
+}
+.icons a:nth-child(1) .layed span,
+.icons a:nth-child(1) .text{
+    color: #1877f2;
+    border-color: #1877f2;
+}
+.icons a:nth-child(2) .layed span,
+.icons a:nth-child(2) .text{
+    color: #1D9BF0;
+    border-color:#1D9BF0;
+}
+.icons a:nth-child(3) .layed span,
+.icons a:nth-child(3) .text{
+    color: #CF02DE;
+    border-color:#CF02DE;
+}
+.icons a:nth-child(4) .layed span,
+.icons a:nth-child(4) .text{
+    color: #0274B3;
+    border-color:#0274B3;
+}
+.icons a:nth-child(5) .layed span,
+.icons a:nth-child(5) .text{
+    color: #FF0000;
+    border-color:#FF0000;
+}
+.icons a:nth-child(1):hover .layed span{
+    box-shadow: 0 0 3px #1877f2;
+}
+.icons a:nth-child(2):hover .layed span{
+    box-shadow: 0 0 3px #1D9BF0;
+}
+.icons a:nth-child(3):hover .layed span{
+    box-shadow: 0 0 3px #CF02DE;
+}
+.icons a:nth-child(4):hover .layed span{
+    box-shadow: 0 0 3px #0274B3;
+}
+.icons a:nth-child(5):hover .layed span{
+    box-shadow: 0 0 3px #FF0000;
+}
+.icons a .text{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -28px;
+    opacity: 0;
+    transition: bottom .3s, opacity .3s;
+}
+.icons a:hover .layed{
+    transform: rotate(-40deg) skew(-10deg) translate(10px, -10px);
+}
+.icons a:hover .text{
+    bottom: -40px;
+    opacity: 1;
+}
